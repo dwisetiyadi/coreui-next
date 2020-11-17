@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react'
+// import React, { useMemo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 //component - CoreUI / CCreateElement
@@ -16,9 +17,9 @@ const CCreateElement = ({ items, components = {} }) => {
   //   return items && items.map((item, i) => renderItem(item, i))
   // }, [JSON.stringify(items)])
 
-  const generatedItems = useMemo(() => {
+  const generatedItems = () => {
     return items && items.map((item, i) => renderItem(item, i))
-  }, [JSON.parse(JSON.stringify(items))])
+  }
 
   return (
     <React.Fragment>
