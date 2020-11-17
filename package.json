@@ -3,36 +3,6 @@
   "version": "3.3.4",
   "description": "CoreUI Next Bootstrap 4 components",
   "license": "MIT",
-  "author": {
-    "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
-  },
-  "contributors": [
-    {
-      "name": "CoreUI Team",
-      "url": "https://github.com/orgs/coreui/people"
-    },
-    {
-      "name": "NUTT Team",
-      "url": "https://www.nutt.co.id"
-    }
-  ],
-  "homepage": "https://coreui.io",
-  "main": "lib/index.js",
-  "types": "src/index.d.ts",
-  "module": "es/index.js",
-  "files": [
-    "css/",
-    "es/",
-    "lib/",
-    "src/",
-    "tests/",
-    "umd/",
-    "README.md",
-    "npm-postinstall.js"
-  ],
   "scripts": {
     "clean": "nwb clean-module && nwb clean-demo",
     "lint": "eslint src",
@@ -113,15 +83,5 @@
   },
   "bugs": {
     "url": "https://github.com/dwisetiyadi/coreui-next/issues"
-  },
-  "keywords": [
-    "coreui",
-    "react",
-    "bootstrap",
-    "framework",
-    "responsive",
-    "layout",
-    "component",
-    "components"
-  ]
+  }
 }
