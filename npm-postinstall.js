@@ -31,6 +31,11 @@ const VERSIONS = {
     name: 'CoreUI Vue components library',
     docs: 'https://coreui.io/vue/docs/introduction/'
   },
+  '@coreui/next': {
+    url: 'https://coreui.io/pro/react/',
+    name: 'CoreUI Next components library',
+    docs: 'https://coreui.io/react/docs/introduction'
+  },
 }
 
 log('\x1b[32m')
