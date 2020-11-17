@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import CPagination from '../pagination/CPagination'
 import CElementCover from '../element-cover/CElementCover'
-import style from 'https://raw.githubusercontent.com/dwisetiyadi/coreui-next/master/public/css/CDataTable.module.css'
+// import style from 'https://raw.githubusercontent.com/dwisetiyadi/coreui-next/master/public/css/CDataTable.module.css'
 import CIcon from '@coreui/icons-react'
 import { cilArrowTop, cilBan, cilFilterX } from '@coreui/icons'
 
