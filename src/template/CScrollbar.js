@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import PerfectScrollbar from 'perfect-scrollbar'
 import 'perfect-scrollbar/css/perfect-scrollbar.css'
-import './public/css/scrollbar.css'
+import 'https://raw.githubusercontent.com/dwisetiyadi/coreui-next/master/public/css/scrollbar.css'
 
 //component - CoreUI / CScrollbar
 const CScrollbar = props => {

@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef, useCallback} from 'react'
 import PropTypes from 'prop-types'
 import tippy from 'tippy.js'
-import './public/tippy.js/dist/tippy.css'
+import 'https://raw.githubusercontent.com/dwisetiyadi/coreui-next/master/public/tippy.js/dist/tippy.css'
 import { renderToString } from 'react-dom/server'
 
 //component - CoreUI / CTooltip
