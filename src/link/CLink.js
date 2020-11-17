@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 
 //component - CoreUI / CLink
 const CLink = props => {
@@ -34,20 +35,20 @@ const CLink = props => {
   )
 
   return to ? (
-    <NavLink
+    <Link
       {...rest}
-      className={classes}
-      onClick={click}
-      ref={innerRef}
+//       className={classes}
+//       onClick={click}
+//       ref={innerRef}
     />
   ) : (
     <a
       href={href || '#'}
       className={classes}
-      rel={rest.target === '_blank' ? 'noopener norefferer' : null}
-      {...rest}
-      onClick={click}
-      ref={innerRef}
+//       rel={rest.target === '_blank' ? 'noopener norefferer' : null}
+//       {...rest}
+//       onClick={click}
+//       ref={innerRef}
     />
   )
 }
@@ -59,7 +60,7 @@ CLink.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  ...NavLink.propTypes,
+//   ...NavLink.propTypes,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
   to: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.func])
 };
