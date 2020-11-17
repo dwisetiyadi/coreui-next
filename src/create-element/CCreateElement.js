@@ -18,7 +18,7 @@ const CCreateElement = ({ items, components = {} }) => {
   // }, [JSON.stringify(items)])
 
   const generatedItems = () => {
-    return items && items.map((item, i) => renderItem(item, i))
+    return items.map((item, i) => renderItem(item, i))
   }
 
   return (
