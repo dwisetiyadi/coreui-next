@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import CFade from '../fade/CFade'
 import { omitByKeys } from '@coreui/utils/src'
 import { CFadeProps } from '../utils/helper.js'
-import './CToast.css'
+import '../../../public/css/CToast.css'
 
 export const Context = React.createContext({})
 

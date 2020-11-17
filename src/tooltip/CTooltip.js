@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef, useCallback} from 'react'
 import PropTypes from 'prop-types'
 import tippy from 'tippy.js'
-import 'tippy.js/dist/tippy.css'
+import '../../../public/css/tippy.css'
 import { renderToString } from 'react-dom/server'
 
 //component - CoreUI / CTooltip
