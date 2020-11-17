@@ -34,24 +34,35 @@ const CLink = props => {
     className
   )
 
-  return to ? (
-    <Link
-      {...rest}
-      href={href || '#'}
-//       className={classes}
-//       onClick={click}
-//       ref={innerRef}
-    />
-  ) : (
-    <a
-      // href={href || '#'}
-      className={classes}
-//       rel={rest.target === '_blank' ? 'noopener norefferer' : null}
-//       {...rest}
-//       onClick={click}
-//       ref={innerRef}
-    />
+  return (
+    <div>
+      <Link
+        {...rest}
+        to={href || '#'}
+        // className={classes}
+        // onClick={click}
+        // ref={innerRef}
+      />
+    </div>
   )
+
+  // return to ? (
+  //   <Link
+  //     {...rest}
+  //     className={classes}
+  //     onClick={click}
+  //     ref={innerRef}
+  //   />
+  // ) : (
+  //   <a
+  //     href={href || '#'}
+  //     className={classes}
+  //     rel={rest.target === '_blank' ? 'noopener norefferer' : null}
+  //     {...rest}
+  //     onClick={click}
+  //     ref={innerRef}
+  //   />
+  // )
 }
 
 CLink.propTypes = {
