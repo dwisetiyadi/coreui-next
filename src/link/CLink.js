@@ -37,13 +37,14 @@ const CLink = props => {
   return to ? (
     <Link
       {...rest}
+      href={href || '#'}
 //       className={classes}
 //       onClick={click}
 //       ref={innerRef}
     />
   ) : (
     <a
-      href={href || '#'}
+//       href={href || '#'}
       className={classes}
 //       rel={rest.target === '_blank' ? 'noopener norefferer' : null}
 //       {...rest}
