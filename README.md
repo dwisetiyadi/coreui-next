@@ -9,7 +9,7 @@
 [npm]: https://www.npmjs.com/package/@coreui/react
 [npm-download]: https://img.shields.io/npm/dm/@coreui/react.svg?style=flat-square
 
-##### @coreui/next v3 for [CoreUI 3 for Next](https://coreui.io/react/)
+##### @coreui/nutt-next v3 for [CoreUI 3 for Next](https://coreui.io/react/)
 
 ###### Over 90 bootstrap based React components and directives
 
@@ -23,7 +23,7 @@ Check out demo of components usage: [CoreUI React Admin Template »](https://cor
 
 Before installation you need to install [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) on your machine.
 ```shell
-npm install @coreui/next
+npm install @coreui/nutt-next
 ```
 
 #### Styling
@@ -34,12 +34,12 @@ Styles have to be imported separately! Import [CoreUI](https://github.com/coreui
 
 Installation:
 ```shell
-npm install @coreui/next
+npm install @coreui/nutt-next
 ```
 
 Styles usage:
 ```scss
-@import "~@coreui/next/scss/coreui";
+@import "~@coreui/nutt-next/scss/coreui";
 ```
 
 ### Changelog
