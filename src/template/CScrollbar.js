@@ -2,7 +2,7 @@ import React, { useState, createRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import PerfectScrollbar from 'perfect-scrollbar'
-import 'perfect-scrollbar/css/perfect-scrollbar.css'
+// import 'perfect-scrollbar/css/perfect-scrollbar.css'
 // import 'https://raw.githubusercontent.com/dwisetiyadi/coreui-next/master/public/css/scrollbar.css'
 
 //component - CoreUI / CScrollbar
