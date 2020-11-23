@@ -1,8 +1,9 @@
 {
   "name": "coreui-next",
-  "version": "3.3.50",
+  "version": "3.3.51",
   "description": "coreui for next",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "author": "Dwi Setiyadi <dwi.setiyadi@gmail.com>",
   "license": "MIT",
   "private": false,
