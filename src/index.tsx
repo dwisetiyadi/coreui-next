@@ -149,4 +149,15 @@ export { default as CWidgetBrand } from './widgets/CWidgetBrand';
 export { default as CWidgetProgressIcon } from './widgets/CWidgetProgressIcon';
 export { default as CWidgetDropdown } from './widgets/CWidgetDropdown';
 export { default as CWidgetSimple } from './widgets/CWidgetSimple';
-export { CIcon } from './icon/coreui-icons-react';
+export { default as CIcon } from './icon/coreui-icons-react';
+export {
+  CChart,
+  CCharts,
+  CChartBar,
+  CChartHorizontalBar,
+  CChartLine,
+  CChartDoughnut,
+  CChartRadar,
+  CChartPie,
+  CChartPolarArea
+} from './chart';

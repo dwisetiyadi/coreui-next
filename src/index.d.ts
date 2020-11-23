@@ -53,8 +53,7 @@ interface CBreadcrumbRouter extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
   routes?: Array<any>;
-  nextRouter: Function;
-  nextLink: any;
+  nextRouter?: Function;
 }
 
 interface CButton extends Omit<CLink, 'size'> {
@@ -201,7 +200,6 @@ interface CCarouselControl extends HTMLPropsNoClassName {
   children?: ChildElement;
   innerRef?: innerRef;
   direction: 'prev' | 'next';
-  nextLink: any;
 }
 
 interface CCarouselIndicators extends HTMLPropsNoClassName {
@@ -603,7 +601,6 @@ interface CLink extends Omit<NavLink, 'className' | 'onClick' | 'to'> {
   disabled?: boolean;
   className?: className | Array<any>;
   to?: object | string | number;
-  nextLink: any;
 }
 
 
@@ -893,7 +890,7 @@ interface CSidebarNavDropdown extends HTMLPropsNoClassName {
   fontIcon?: string;
   show?: boolean;
   route?: string;
-  nextRouter: Function;
+  nextRouter?: Function;
 }
 
 interface CSidebarNavItem extends Omit<CLink, 'label'> {
@@ -1089,6 +1086,31 @@ interface CDropdownHeader extends HTMLPropsNoClassName {
   className?: className;
 }
 
+interface Charts extends HTMLProps<any> {
+  innerRef?: any
+  datasets?: Array<any>
+  labels?: string | Array<any>
+  options?: any
+  plugins?: Array<any>
+}
+
+interface CChart extends Charts {
+  type?: string
+}
+
+interface CChartBar extends Charts { }
+interface CChartHorizontalBar extends Charts { }
+interface CChartLine extends Charts { }
+interface CChartDoughnut extends Charts { }
+interface CChartRadar extends Charts { }
+interface CChartPie extends Charts { }
+interface CChartPolarArea extends Charts { }
+
+interface canvas {
+  id?: any;
+  ref?: any;
+}
+
 export declare const CAlert: (props: CAlert) => any;
 export declare const CBadge: (props: CBadge) => any;
 export declare const CBrand: (props: CBrand) => any;
@@ -1210,6 +1232,15 @@ export declare const CWidgetSimple: (props: CWidgetSimple) => any;
 export declare const CIcon: (props: CIcon) => any;
 export declare const CDropdownDivider: (props: CDropdownDivider) => any;
 export declare const CDropdownHeader: (props: CDropdownHeader) => any;
+export declare const CChart: (props: CChart) => any;
+export declare const CChartBar: (props: CChartBar) => any;
+export declare const CChartHorizontalBar: (props: CChartHorizontalBar) => any;
+export declare const CChartLine: (props: CChartLine) => any;
+export declare const CChartDoughnut: (props: CChartDoughnut) => any;
+export declare const CChartRadar: (props: CChartRadar) => any;
+export declare const CChartPie: (props: CChartPie) => any;
+export declare const CChartPolarArea: (props: CChartPolarArea) => any;
+export declare const canvas: (props: canvas) => any;
 
 declare module 'coreui-next/dist/icon/coreui-icons/js/src/brand/index';
 declare module 'coreui-next/dist/icon/coreui-icons/js/src/flag/index';

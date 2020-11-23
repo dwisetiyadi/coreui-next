@@ -2,7 +2,7 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import classNames from 'classnames';
-// import Link from 'next/link';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 
@@ -17,7 +17,6 @@ const CCarouselControl = (props: any) => {
     //
     innerRef,
     direction,
-    nextLink: Link,
     ...attributes
   } = props;
 
@@ -73,7 +72,6 @@ CCarouselControl.propTypes = {
   //
   innerRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   direction: PropTypes.oneOf(['prev', 'next']).isRequired,
-  nextLink: PropTypes.node,
 };
 
 export default CCarouselControl;

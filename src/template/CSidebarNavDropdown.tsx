@@ -80,7 +80,7 @@ const CSidebarNavDropdown = (props: any) => {
     setIsOpen(!isOpen);
   };
 
-  const path = nextRouter();
+  const path = nextRouter() || '';
 
   useEffect(() => {
     if (dropdownMode === 'close') {
@@ -146,7 +146,7 @@ CSidebarNavDropdown.propTypes = {
   fontIcon: PropTypes.string,
   show: PropTypes.bool,
   route: PropTypes.string,
-  nextRouter: PropTypes.func,
+  nextRouter: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
 };
 
 export default CSidebarNavDropdown;

@@ -4,7 +4,7 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import classNames from 'classnames';
-// import Link from 'next/link';
+import Link from 'next/link';
 // import { useRouter } from 'next/router';
 import PropTypes, { any } from 'prop-types';
 import React from 'react';
@@ -12,9 +12,9 @@ import React from 'react';
 import { CBreadcrumb, CBreadcrumbItem } from '../index';
 
 const CBreadcrumbRouter = (props: any) => {
-  const { className, innerRef, routes, nextRouter, nextLink: Link, ...attributes } = props;
+  const { className, innerRef, routes, nextRouter, ...attributes } = props;
 
-  const router = nextRouter();
+  const router = nextRouter() || '';
 
   let items = null;
   if (routes) {
@@ -56,8 +56,7 @@ CBreadcrumbRouter.propTypes = {
   ]),
   innerRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   routes: PropTypes.array,
-  nextRouter: PropTypes.func,
-  nextLink: PropTypes.node,
+  nextRouter: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
 };
 
 export default CBreadcrumbRouter;
