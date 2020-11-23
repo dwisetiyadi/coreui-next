@@ -14,7 +14,7 @@ import { CBreadcrumb, CBreadcrumbItem } from '../index';
 const CBreadcrumbRouter = (props: any) => {
   const { className, innerRef, routes, nextRouter, ...attributes } = props;
 
-  const router = nextRouter() || '';
+  const router = typeof nextRouter === "function" ? nextRouter() : { pathname: '' };
 
   let items = null;
   if (routes) {
@@ -56,7 +56,7 @@ CBreadcrumbRouter.propTypes = {
   ]),
   innerRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   routes: PropTypes.array,
-  nextRouter: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
+  nextRouter: PropTypes.any,
 };
 
 export default CBreadcrumbRouter;

@@ -20,7 +20,7 @@ const CCreateElement = ({ items, components = {} }: any): JSX.Element => {
     }
     return (
       <>
-        <Tag key={i + 1} {...rest}>
+        <Tag key={`${i}${item.to}`} {...rest}>
           {children}
         </Tag>
       </>

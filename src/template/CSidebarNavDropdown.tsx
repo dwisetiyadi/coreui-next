@@ -48,6 +48,7 @@ const CSidebarNavDropdown = (props: any) => {
     fontIcon,
     name,
     show,
+    to,
     // route,
     nextRouter,
     ...attributes
@@ -80,7 +81,7 @@ const CSidebarNavDropdown = (props: any) => {
     setIsOpen(!isOpen);
   };
 
-  const path = nextRouter() || '';
+  const path = typeof nextRouter === "function" ? nextRouter() : { includes: () => null };
 
   useEffect(() => {
     if (dropdownMode === 'close') {
@@ -109,7 +110,7 @@ const CSidebarNavDropdown = (props: any) => {
 
   return (
     <>
-      <li className={classes} {...attributes} ref={ref}>
+      <li className={classes} {...attributes} ref={ref} key={`0/${to}`}>
         <a
           className="c-sidebar-nav-dropdown-toggle"
           // @ts-ignore
@@ -146,7 +147,8 @@ CSidebarNavDropdown.propTypes = {
   fontIcon: PropTypes.string,
   show: PropTypes.bool,
   route: PropTypes.string,
-  nextRouter: PropTypes.oneOfType([PropTypes.any, PropTypes.func]),
+  nextRouter: PropTypes.any,
+  to: PropTypes.string,
 };
 
 export default CSidebarNavDropdown;

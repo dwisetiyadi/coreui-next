@@ -53,7 +53,7 @@ interface CBreadcrumbRouter extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
   routes?: Array<any>;
-  nextRouter?: Function;
+  nextRouter?: any;
 }
 
 interface CButton extends Omit<CLink, 'size'> {
@@ -890,7 +890,7 @@ interface CSidebarNavDropdown extends HTMLPropsNoClassName {
   fontIcon?: string;
   show?: boolean;
   route?: string;
-  nextRouter?: Function;
+  nextRouter?: any;
 }
 
 interface CSidebarNavItem extends Omit<CLink, 'label'> {
