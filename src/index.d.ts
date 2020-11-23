@@ -1083,9 +1083,9 @@ interface CDropdownHeader extends HTMLPropsNoClassName {
   className?: className;
 }
 
-export * from './icon/coreui-icons/js/src/brand/index'
-export * from './icon/coreui-icons/js/src/flag/index'
-export * from './icon/coreui-icons/js/src/free/index'
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/brand/index'
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/flag/index'
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/free/index'
 
 export declare const CAlert: (props: CAlert) => any;
 export declare const CBadge: (props: CBadge) => any;
