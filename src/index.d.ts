@@ -220,23 +220,24 @@ interface CCarouselItem extends HTMLPropsNoClassName {
 }
 
 type columnProps = boolean | number | string | {
-  size?: boolean | number | string,
-  order?: string | number,
-  offset?: string | number
+  size?: boolean | number | string;
+  order?: string | number;
+  offset?: string | number;
 }
 
 interface CCol extends HTMLPropsNoClassName {
-  children?: ChildElement
-  tag?: any
-  className?: className
-  innerRef?: innerRef
-  xs?: columnProps
-  sm?: columnProps
-  md?: columnProps
-  lg?: columnProps
-  xl?: columnProps
-  xxl?: columnProps
-  widths?: Array<any>
+  children?: ChildElement;
+  tag?: any;
+  className?: className;
+  innerRef?: innerRef;
+  xs?: columnProps;
+  sm?: columnProps;
+  md?: columnProps;
+  lg?: columnProps;
+  xl?: columnProps;
+  xxl?: columnProps;
+  widths?: Array<any>;
+  col: string;
 }
 
 
@@ -325,6 +326,7 @@ interface CDataTable {
   onTableFilterChange?: Function;
   onPageChange?: Function;
   onFilteredItemsChange?: Function;
+  bordered: boolean;
 }
 
 interface CDropdown extends HTMLPropsNoClassName {
@@ -333,6 +335,7 @@ interface CDropdown extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
   inNav?: boolean;
+  size?: any;
 }
 
 interface CDropdownItem extends CLink {
@@ -524,6 +527,7 @@ interface CSelect extends sharedInputProps, Omit<HTMLPropsNoClassName, 'size'> {
   children?: ChildElement;
   size?: string;
   sizeHtml?: string | number;
+  custom?: boolean;
 }
 
 interface CInputGroup extends Omit<HTMLPropsNoClassName, 'size'> {
@@ -694,6 +698,7 @@ interface CNavbar extends HTMLPropsNoClassName {
   fixed?: '' | 'top' | 'bottom';
   sticky?: boolean;
   expandable?: boolean | string;
+  toggleable?: any;
 }
 
 interface CNavbarNav extends HTMLPropsNoClassName {
@@ -749,7 +754,7 @@ interface CTooltip {
   placement?: '' | 'top-end' | 'top' | 'top-start' |
   'bottom-end' | 'bottom' | 'bottom-start' |
   'right-start' | 'right' | 'right-end' |
-  'left-start' | 'left' | 'left-end';
+  'left-start' | 'left' | 'left-end' | any;
   trigger?: string;
   advancedOptions?: object;
 }
@@ -757,6 +762,7 @@ interface CTooltip {
 interface CPopover extends CTooltip {
   content?: ChildElement;
   header?: ChildElement;
+  placement?: any;
 }
 
 interface CProgress extends Omit<HTMLPropsNoClassName, 'size'> {
@@ -910,14 +916,15 @@ interface CSubheader extends HTMLPropsNoClassName {
 }
 
 interface CSwitch extends Omit<HTMLPropsNoClassName, 'size'> {
-  className?: className
-  innerRef?: innerRef
-  size?: '' | 'lg' | 'sm'
-  color?: string
-  labelOn?: string
-  labelOff?: string
-  variant?: '' | '3d' | 'opposite' | 'outline'
-  shape?: '' | 'pill' | 'square'
+  className?: className;
+  innerRef?: innerRef;
+  size?: '' | 'lg' | 'sm';
+  color?: string;
+  labelOn?: string;
+  labelOff?: string;
+  variant?: '' | '3d' | 'opposite' | 'outline';
+  shape?: '' | 'pill' | 'square';
+  tabIndex?: any;
 }
 
 interface CTabContent extends HTMLPropsNoClassName {
@@ -961,7 +968,7 @@ interface CToaster extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
   position?: '' | 'static' | 'top-right' | 'top-left' | 'top-center' | 'top-full' |
-  'bottom-right' | 'bottom-left' | 'bottom-center' | 'bottom-full';
+  'bottom-right' | 'bottom-left' | 'bottom-center' | 'bottom-full' | string;
 }
 
 interface CToastHeader extends HTMLPropsNoClassName {
@@ -1024,6 +1031,7 @@ interface CWidgetProgress extends HTMLPropsNoClassName {
   color?: string;
   value?: number;
   inverse?: boolean;
+  variant?: string;
 }
 
 interface CWidgetProgressIcon extends HTMLPropsNoClassName {
@@ -1047,15 +1055,19 @@ interface CWidgetSimple extends HTMLPropsNoClassName {
 }
 
 interface CIcon extends Omit<HTMLProps<any>, 'content' | 'size'> {
-  className?: string
-  name?: string
-  content?: string | Array<string>
-  size?: string
-  customClasses?: string | Array<any> | object
-  src?: string
-  title?: string
-  use?: string
+  className?: string;
+  name?: string;
+  content?: string | Array<string> | unknown;
+  size?: string;
+  customClasses?: string | Array<any> | object;
+  src?: string;
+  title?: string;
+  use?: string;
 }
+
+export * from './icon/coreui-icons/js/src/brand/index'
+export * from './icon/coreui-icons/js/src/flag/index'
+export * from './icon/coreui-icons/js/src/free/index'
 
 export declare const CAlert: (props: CAlert) => any;
 export declare const CBadge: (props: CBadge) => any;
