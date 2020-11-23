@@ -238,6 +238,7 @@ interface CCol extends HTMLPropsNoClassName {
   xxl?: columnProps;
   widths?: Array<any>;
   col?: string;
+  size?: any;
 }
 
 
@@ -569,6 +570,12 @@ interface CLabel extends HTMLPropsNoClassName {
   hidden?: boolean;
   variant?: 'custom-file' | 'checkbox' | 'custom-checkbox';
   col?: string | boolean;
+  xs?: columnProps;
+  sm?: columnProps;
+  md?: columnProps;
+  lg?: columnProps;
+  xl?: columnProps;
+  xxl?: columnProps;
 }
 
 interface NavLink extends HTMLProps<HTMLAnchorElement> {
@@ -1066,6 +1073,16 @@ interface CIcon extends Omit<HTMLProps<any>, 'content' | 'size'> {
   use?: string;
 }
 
+interface CDropdownDivider extends HTMLPropsNoClassName {
+  children?: ChildElement;
+  className?: className;
+}
+
+interface CDropdownHeader extends HTMLPropsNoClassName {
+  children?: ChildElement;
+  className?: className;
+}
+
 export * from './icon/coreui-icons/js/src/brand/index'
 export * from './icon/coreui-icons/js/src/flag/index'
 export * from './icon/coreui-icons/js/src/free/index'
@@ -1189,3 +1206,5 @@ export declare const CWidgetProgress: (props: CWidgetProgress) => any;
 export declare const CWidgetProgressIcon: (props: CWidgetProgressIcon) => any;
 export declare const CWidgetSimple: (props: CWidgetSimple) => any;
 export declare const CIcon: (props: CIcon) => any;
+export declare const CDropdownDivider: (props: CDropdownDivider) => any;
+export declare const CDropdownHeader: (props: CDropdownHeader) => any;
