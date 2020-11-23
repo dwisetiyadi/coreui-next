@@ -326,7 +326,7 @@ interface CDataTable {
   onTableFilterChange?: Function;
   onPageChange?: Function;
   onFilteredItemsChange?: Function;
-  bordered: boolean;
+  bordered?: boolean;
 }
 
 interface CDropdown extends HTMLPropsNoClassName {
@@ -511,6 +511,7 @@ interface CInput extends sharedInputProps, Omit<HTMLPropsNoClassName, 'size'> {
 interface CTextarea extends sharedInputProps, Omit<HTMLPropsNoClassName, 'size'> {
   plaintext?: boolean;
   size?: string;
+  rows?: any;
 }
 
 interface CInputFile extends sharedInputProps, HTMLPropsNoClassName {
@@ -744,7 +745,7 @@ interface CPagination extends Omit<HTMLPropsNoClassName, 'size'> {
   addListClass?: string;
   limit?: number;
   pages?: number;
-  onActivePageChange: Function;
+  onActivePageChange?: Function;
 }
 
 interface CTooltip {
