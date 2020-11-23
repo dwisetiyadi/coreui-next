@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import classNames from 'classnames';
 // import { NavLink } from 'react-router-dom'
-import Link from 'next/link';
+// import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -20,6 +20,7 @@ const CLink = (props: any) => {
     onClick,
     disabled,
     children,
+    nextLink: Link,
     ...rest
   } = props;
 
@@ -79,6 +80,7 @@ CLink.propTypes = {
   to: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.func]),
   children: PropTypes.node,
   rel: PropTypes.string,
+  nextLink: PropTypes.node,
   target: PropTypes.string,
 };
 

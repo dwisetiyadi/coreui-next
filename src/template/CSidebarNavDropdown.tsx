@@ -9,7 +9,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CIcon } from '../icon/coreui-icons-react';
 import classNames from 'classnames';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import React, {
   createRef,
@@ -49,6 +49,7 @@ const CSidebarNavDropdown = (props: any) => {
     name,
     show,
     // route,
+    nextRouter,
     ...attributes
   } = props;
 
@@ -79,7 +80,7 @@ const CSidebarNavDropdown = (props: any) => {
     setIsOpen(!isOpen);
   };
 
-  const path = useRouter();
+  const path = nextRouter();
 
   useEffect(() => {
     if (dropdownMode === 'close') {
@@ -145,6 +146,7 @@ CSidebarNavDropdown.propTypes = {
   fontIcon: PropTypes.string,
   show: PropTypes.bool,
   route: PropTypes.string,
+  nextRouter: PropTypes.func,
 };
 
 export default CSidebarNavDropdown;

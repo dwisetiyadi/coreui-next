@@ -53,6 +53,8 @@ interface CBreadcrumbRouter extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
   routes?: Array<any>;
+  nextRouter: Function;
+  nextLink: any;
 }
 
 interface CButton extends Omit<CLink, 'size'> {
@@ -199,6 +201,7 @@ interface CCarouselControl extends HTMLPropsNoClassName {
   children?: ChildElement;
   innerRef?: innerRef;
   direction: 'prev' | 'next';
+  nextLink: any;
 }
 
 interface CCarouselIndicators extends HTMLPropsNoClassName {
@@ -600,6 +603,7 @@ interface CLink extends Omit<NavLink, 'className' | 'onClick' | 'to'> {
   disabled?: boolean;
   className?: className | Array<any>;
   to?: object | string | number;
+  nextLink: any;
 }
 
 
@@ -889,6 +893,7 @@ interface CSidebarNavDropdown extends HTMLPropsNoClassName {
   fontIcon?: string;
   show?: boolean;
   route?: string;
+  nextRouter: Function;
 }
 
 interface CSidebarNavItem extends Omit<CLink, 'label'> {
