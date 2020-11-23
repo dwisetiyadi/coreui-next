@@ -1,7 +1,7 @@
 {
   "name": "coreui-next",
-  "version": "3.3.17",
-  "description": "CoreUI Next Bootstrap 4 components",
+  "version": "3.3.50",
+  "description": "coreui for next",
   "main": "/dist/index.js",
   "author": "Dwi Setiyadi <dwi.setiyadi@gmail.com>",
   "license": "MIT",
