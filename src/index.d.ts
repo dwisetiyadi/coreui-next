@@ -266,6 +266,7 @@ interface CCollapse extends HTMLPropsNoClassName {
   innerRef?: innerRef;
   show?: boolean;
   navbar?: boolean;
+  timeout?: number;
 }
 
 interface CContainer extends HTMLPropsNoClassName {
@@ -1083,10 +1084,6 @@ interface CDropdownHeader extends HTMLPropsNoClassName {
   className?: className;
 }
 
-declare module 'coreui-next/dist/icon/coreui-icons/js/src/brand/index'
-declare module 'coreui-next/dist/icon/coreui-icons/js/src/flag/index'
-declare module 'coreui-next/dist/icon/coreui-icons/js/src/free/index'
-
 export declare const CAlert: (props: CAlert) => any;
 export declare const CBadge: (props: CBadge) => any;
 export declare const CBrand: (props: CBrand) => any;
@@ -1208,3 +1205,7 @@ export declare const CWidgetSimple: (props: CWidgetSimple) => any;
 export declare const CIcon: (props: CIcon) => any;
 export declare const CDropdownDivider: (props: CDropdownDivider) => any;
 export declare const CDropdownHeader: (props: CDropdownHeader) => any;
+
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/brand/index';
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/flag/index';
+declare module 'coreui-next/dist/icon/coreui-icons/js/src/free/index';
