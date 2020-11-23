@@ -1046,6 +1046,17 @@ interface CWidgetSimple extends HTMLPropsNoClassName {
   text?: string;
 }
 
+interface CIcon extends Omit<HTMLProps<any>, 'content' | 'size'> {
+  className?: string
+  name?: string
+  content?: string | Array<string>
+  size?: string
+  customClasses?: string | Array<any> | object
+  src?: string
+  title?: string
+  use?: string
+}
+
 export declare const CAlert: (props: CAlert) => any;
 export declare const CBadge: (props: CBadge) => any;
 export declare const CBrand: (props: CBrand) => any;
@@ -1164,3 +1175,4 @@ export declare const CWidgetIcon: (props: CWidgetIcon) => any;
 export declare const CWidgetProgress: (props: CWidgetProgress) => any;
 export declare const CWidgetProgressIcon: (props: CWidgetProgressIcon) => any;
 export declare const CWidgetSimple: (props: CWidgetSimple) => any;
+export declare const CIcon: (props: CIcon) => any;
