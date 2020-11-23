@@ -237,7 +237,7 @@ interface CCol extends HTMLPropsNoClassName {
   xl?: columnProps;
   xxl?: columnProps;
   widths?: Array<any>;
-  col: string;
+  col?: string;
 }
 
 
