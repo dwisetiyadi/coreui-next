@@ -29,39 +29,39 @@ const CSidebarNavItem = (props: any) => {
 
   // @ts-ignore
   const { isOpen } = useContext(DropdownContext);
-  const classes = classNames('c-sidebar-nav-item', className);
+  const classes = classNames(
+    'c-sidebar-nav-item',
+    className
+  );
 
   const linkClasses = classNames(
     label ? 'c-sidebar-nav-label' : 'c-sidebar-nav-link',
     color && `c-sidebar-nav-link-${color}`,
-    addLinkClass
+    addLinkClass,
+    (rest.nextRouter === rest.to) ? 'c-active' : '',
   );
 
-  const routerLinkProps = rest.to && {
-    exact: 'true',
-    activeclassname: 'c-active',
-  };
+  if (rest.nextProps) {
+    delete rest.nextProps;
+  }
+
+  // const routerLinkProps = rest.to && { exact: true, activeClassName: 'c-active' }
   return (
-    <>
-      <li className={classes} ref={innerRef}>
-        {children || (
-          <CLink
-            className={linkClasses}
-            {...routerLinkProps}
-            {...rest}
-            tabIndex={isOpen === false ? -1 : 0}
-          >
-            {icon &&
-              (isValidElement(icon) ? icon : <CIcon {...iconProps(icon)} />)}
-            {/* { fontIcon && <i className={`c-sidebar-nav-icon ${fontIcon}`} />} */}
-            {name}
-            {badge && (
-              <CBadge {...{ ...badge, text: null }}>{badge.text}</CBadge>
-            )}
-          </CLink>
-        )}
-      </li>
-    </>
+    <li className={classes} ref={innerRef}>
+      { children ||
+        <CLink
+          className={linkClasses}
+          // {...routerLinkProps}
+          {...rest}
+          tabIndex={isOpen === false ? -1 : 0}
+        >
+          {icon && (isValidElement(icon) ? icon : <CIcon {...iconProps(icon)} />)}
+          {fontIcon && <i className={`c-sidebar-nav-icon ${fontIcon}`} />}
+          {name}
+          {badge && <CBadge {...{ ...badge, text: null }}>{badge.text}</CBadge>}
+        </CLink>
+      }
+    </li>
   );
 };
 
@@ -80,6 +80,7 @@ CSidebarNavItem.propTypes = {
   label: PropTypes.bool,
   name: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   color: PropTypes.string,
+  nextRouter: PropTypes.any,
 };
 
 export default CSidebarNavItem;

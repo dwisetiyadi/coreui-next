@@ -8,26 +8,27 @@ import Link from 'next/link';
 // import { useRouter } from 'next/router';
 import PropTypes, { any } from 'prop-types';
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { CBreadcrumb, CBreadcrumbItem } from '../index';
 
 const CBreadcrumbRouter = (props: any) => {
   const { className, innerRef, routes, nextRouter, ...attributes } = props;
 
-  const router = typeof nextRouter === "function" ? nextRouter() : { pathname: '' };
+  const router = (nextRouter) ? nextRouter : '';
 
   let items = null;
   if (routes) {
     items = routes.map((route: any, key: number) => {
-      if (route.path === router.pathname) {
+      if (route.path === router) {
         return (
-          <CBreadcrumbItem key={key + 1} active>
+          <CBreadcrumbItem key={uuidv4()} active>
             {route.name}
           </CBreadcrumbItem>
         );
       }
       return (
-        <CBreadcrumbItem key={key + 1}>
+        <CBreadcrumbItem key={uuidv4()}>
           <Link href={route.path}>
             <a>{route.name}</a>
           </Link>

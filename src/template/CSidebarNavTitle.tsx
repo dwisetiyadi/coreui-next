@@ -17,6 +17,10 @@ const CSidebarNavTitle = (props: any) => {
   // render
   const classes = classNames('c-sidebar-nav-title', className);
 
+  if (attributes.nextProps) {
+    delete attributes.nextProps;
+  }
+
   return (
     <>
       <li className={classes} {...attributes} ref={innerRef} />

@@ -5,6 +5,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Context } from './CCarousel';
 // component - CoreUI / CCarouselIndicators
@@ -26,11 +27,11 @@ const CCarouselIndicators = (props: any) => {
   const listClasses = classNames(indicatorsClass, className);
 
   const indicators = Array.from({ length: itemNumber }, (_, i) => i).map(
-    (key) => {
+    (key, i) => {
       return (
         <>
           <li
-            key={`indicator${key}`}
+            key={uuidv4()}
             onClick={() => {
               !animating && key !== state[1] && setState([state[1], key]);
             }}

@@ -6,6 +6,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import CLink from '../link/CLink';
 
@@ -154,7 +155,7 @@ const CPagination = (props: any) => {
             return (
               <li
                 className={`${activePage === i ? 'active' : ''} page-item`}
-                key={k + 1}
+                key={uuidv4()}
               >
                 {/* @ts-ignore */}
                 <CLink

@@ -39,6 +39,10 @@ const CLink = (props: any) => {
     className
   );
 
+  if (rest.nextProps) {
+    delete rest.nextProps;
+  }
+
   if (to) {
     return (
       <Link href={to}>
@@ -49,7 +53,7 @@ const CLink = (props: any) => {
     );
   }
   return (
-    <Link href={href || '/'}>
+    <Link href="#">
       <a
         className={classes}
         onClick={click}
@@ -82,17 +86,17 @@ CLink.propTypes = {
   target: PropTypes.string,
 };
 
-// CLink.sortAttributes = (attributesToSort) => {
-//   const attributes = {}
-//   const linkProps = {}
-//   Object.entries(attributesToSort || {}).forEach(([key, value]) => {
-//     if (Object.keys(CLink.propTypes).includes(key)) {
-//       linkProps[key] = value
-//     } else {
-//       attributes[key] = value
-//     }
-//   })
-//   return { linkProps, attributes }
-// }
+CLink.sortAttributes = (attributesToSort) => {
+  const attributes = {}
+  const linkProps = {}
+  Object.entries(attributesToSort || {}).forEach(([key, value]) => {
+    if (Object.keys(CLink.propTypes).includes(key)) {
+      linkProps[key] = value
+    } else {
+      attributes[key] = value
+    }
+  })
+  return { linkProps, attributes }
+}
 
 export default CLink;

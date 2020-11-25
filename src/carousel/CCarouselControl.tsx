@@ -2,7 +2,6 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import classNames from 'classnames';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 
@@ -43,21 +42,18 @@ const CCarouselControl = (props: any) => {
 
   return (
     <>
-      <Link
+      <a
         className={anchorClasses}
         {...attributes}
         onClick={onClick}
-        ref={innerRef}
-      >
-        <a>
-          {children || (
-            <span
-              className={`carousel-control-${direction}-icon`}
-              aria-label={direction}
-            />
-          )}
-        </a>
-      </Link>
+        ref={innerRef}>
+        {children || (
+          <span
+            className={`carousel-control-${direction}-icon`}
+            aria-label={direction}
+          />
+        )}
+      </a>
     </>
   );
 };

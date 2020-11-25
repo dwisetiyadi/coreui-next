@@ -6,9 +6,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import PropTypes from 'prop-types';
 import React, { useMemo } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 // component - CoreUI / CCreateElement
-const CCreateElement = ({ items, components = {} }: any): JSX.Element => {
+const CCreateElement = ({ items, components = {}, nextRouter }: any): JSX.Element => {
   const renderItem = (item: any, i: number) => {
     const { _tag, _children, ...rest } = item;
     const Tag = components[_tag] || _tag;
@@ -18,9 +19,10 @@ const CCreateElement = ({ items, components = {} }: any): JSX.Element => {
         return typeof child === 'object' ? renderItem(child, k) : child;
       });
     }
+    console.log(uuidv4());
     return (
       <>
-        <Tag key={`${i}${item.to}`} {...rest}>
+        <Tag key={uuidv4()} nextRouter={nextRouter} {...rest}>
           {children}
         </Tag>
       </>
@@ -38,6 +40,7 @@ CCreateElement.propTypes = {
   items: PropTypes.array.isRequired,
   key: PropTypes.number,
   components: PropTypes.object,
+  nextRouter: PropTypes.any,
 };
 
 export default CCreateElement;

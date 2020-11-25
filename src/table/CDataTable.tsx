@@ -14,6 +14,7 @@ import { icons } from '../icon/coreui-icons/js';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import CElementCover from '../element-cover/CElementCover';
 import CPagination from '../pagination/CPagination';
@@ -455,7 +456,7 @@ const CDataTable = (props: any) => {
             }}
             className={classNames([headerClass(index), sortingIconStyles])}
             style={headerStyles(index)}
-            key={index + 1}
+            key={uuidv4()}
           >
             {/* eslint-disable prettier/prettier */}
             {columnHeaderSlot[`${rawColumnNames[index]}`] || (
@@ -560,7 +561,7 @@ const CDataTable = (props: any) => {
                   return (
                     <th
                       className={classNames(headerClass(index))}
-                      key={index + 1}
+                      key={uuidv4()}
                     >
                       {columnFilterSlot[`${rawColumnNames[index]}`] ||
                         ((!fields || fields[index].filter !== false) && (
@@ -615,7 +616,7 @@ const CDataTable = (props: any) => {
                             className={classNames(
                               cellClass(item, colName, index)
                             )}
-                            key={index + 1}
+                            key={uuidv4()}
                           >
                             {String(item[colName])}
                           </td>
@@ -630,7 +631,7 @@ const CDataTable = (props: any) => {
                       }}
                       className="p-0"
                       style={{ border: 'none !important' }}
-                      key={`details${itemIndex}`}
+                      key={uuidv4()}
                     >
                       <td
                         colSpan={colspan}

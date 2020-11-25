@@ -1,6 +1,6 @@
 {
   "name": "coreui-next",
-  "version": "3.3.79",
+  "version": "3.3.111",
   "description": "coreui for next",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
@@ -23,7 +23,8 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-transition-group": "^4.4.1",
-    "tippy.js": "^6.2.7"
+    "tippy.js": "^6.2.7",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.9",

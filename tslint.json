@@ -14,5 +14,8 @@
     "variable-name": false,
     "jsx-boolean-value": false,
     "prefer-conditional-expression": false
-  }
+  },
+  "include": [
+    "index.d.ts"
+  ]
 }

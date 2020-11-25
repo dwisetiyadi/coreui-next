@@ -90,7 +90,7 @@ CCarousel.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]),
-  children: PropTypes.array,
+  children: PropTypes.any,
   //
   innerRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   activeIndex: PropTypes.number,

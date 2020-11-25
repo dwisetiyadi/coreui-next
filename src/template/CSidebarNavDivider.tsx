@@ -18,6 +18,10 @@ const CSidebarNavDivider = (props: any) => {
 
   const classes = classNames('c-sidebar-nav-divider', className);
 
+  if (attributes.nextProps) {
+    delete attributes.nextProps;
+  }
+
   return (
     <>
       <li className={classes} {...attributes} ref={innerRef} />

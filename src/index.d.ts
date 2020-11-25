@@ -281,6 +281,7 @@ interface CContainer extends HTMLPropsNoClassName {
 interface CCreateElement {
   items: Array<any>;
   components?: object;
+  nextRouter: any;
 }
 
 interface CDataTable {
@@ -879,6 +880,7 @@ interface CSidebarNav extends HTMLPropsNoClassName {
 interface CSidebarNavDivider extends HTMLPropsNoClassName {
   className?: className;
   innerRef?: innerRef;
+  nextRouter?: any;
 }
 
 interface CSidebarNavDropdown extends HTMLPropsNoClassName {
@@ -902,12 +904,14 @@ interface CSidebarNavItem extends Omit<CLink, 'label'> {
   addLinkClass?: string;
   label?: boolean;
   name?: string;
+  nextRouter?: any;
 }
 
 interface CSidebarNavTitle extends HTMLPropsNoClassName {
   children?: ChildElement;
   className?: className;
   innerRef?: innerRef;
+  nextRouter?: any;
 }
 
 interface CSpinner extends Omit<HTMLPropsNoClassName, 'size'> {

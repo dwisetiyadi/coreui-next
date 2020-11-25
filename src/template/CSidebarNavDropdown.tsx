@@ -49,68 +49,67 @@ const CSidebarNavDropdown = (props: any) => {
     name,
     show,
     to,
-    // route,
+    route,
     nextRouter,
     ...attributes
   } = props;
 
-  const ref = createRef();
-  innerRef && innerRef(ref);
+  const ref = createRef()
+  innerRef && innerRef(ref)
 
   // @ts-ignore
-  const { dropdownMode, openDropdown, setOpenDropdown } = useContext(Context);
+  const { dropdownMode, openDropdown, setOpenDropdown } = useContext(Context)
 
-  const [isOpen, setIsOpen] = useState(show);
+  const [isOpen, setIsOpen] = useState(show)
   useEffect(() => {
-    setIsOpen(show);
-  }, [show]);
+    setIsOpen(show)
+  }, [show])
 
   useEffect(() => {
-    !dropdownMode && // @ts-ignore
-      (!openDropdown || !ref.current.contains(openDropdown)) &&
-      setIsOpen(false);
-  }, [openDropdown]);
+    // @ts-ignore
+    !dropdownMode && (!openDropdown || !ref.current.contains(openDropdown)) && setIsOpen(false)
+  }, [openDropdown])
 
   const toggle = () => {
-    !dropdownMode &&
-      setOpenDropdown(
-        isOpen // @ts-ignore
-          ? ref.current.parentNode.closest('.c-sidebar-nav-dropdown')
-          : ref.current
-      );
-    setIsOpen(!isOpen);
-  };
+    !dropdownMode && setOpenDropdown(
+      // @ts-ignore
+      isOpen ? ref.current.parentNode.closest('.c-sidebar-nav-dropdown') : ref.current
+    )
+    setIsOpen(!isOpen)
+  }
 
-  const path = typeof nextRouter === "function" ? nextRouter() : { includes: () => null };
+  let path = ''
+  try {
+    path = (nextRouter) ? nextRouter : '';
+  } catch (e) {
+    console.warn(e)
+  }
 
   useEffect(() => {
     if (dropdownMode === 'close') {
-      setIsOpen(false);
-      // } else if (dropdownMode === 'closeInactive' && route) {
-      //   setIsOpen(path.includes(route));
-    } else if (dropdownMode === 'closeInactive') {
-      setIsOpen(false);
-    } else if (
-      (!dropdownMode || dropdownMode !== 'noAction') &&
-      !isOpen
-      // route
-    ) {
-      setIsOpen(false);
+      setIsOpen(false)
+    } else if (dropdownMode === 'closeInactive' && route) {
+      setIsOpen(path.includes(route))
+    } else if ((!dropdownMode || dropdownMode !== 'noAction') && !isOpen && route) {
+      setIsOpen(path.includes(route))
     }
-  }, [path]);
+  }, [path])
 
   // render
   const classes = classNames(
     'c-sidebar-nav-dropdown',
     isOpen && 'c-show',
     className
-  );
+  )
 
-  const iconClasses = classNames('c-sidebar-nav-icon', fontIcon);
+  const iconClasses = classNames(
+    'c-sidebar-nav-icon',
+    fontIcon
+  )
 
   return (
     <>
-      <li className={classes} {...attributes} ref={ref} key={`0/${to}`}>
+      <li className={classes} {...attributes} ref={ref}>
         <a
           className="c-sidebar-nav-dropdown-toggle"
           // @ts-ignore
