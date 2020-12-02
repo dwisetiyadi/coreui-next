@@ -1,6 +1,6 @@
 {
   "name": "coreui-next",
-  "version": "3.3.114",
+  "version": "3.3.115",
   "description": "coreui for next",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
