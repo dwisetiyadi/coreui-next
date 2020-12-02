@@ -123,6 +123,7 @@ import {
   cilX,
   cilXCircle,
   cilPowerStandby,
+  cilHeart,
 } from './src';
 
 import { logo } from './logo';
@@ -225,6 +226,7 @@ export const icons: Record<any, any> = {
   cilXCircle,
   cilWarning,
   cilPowerStandby,
+  cilHeart,
   cifUs,
   cifBr,
   cifIn,
