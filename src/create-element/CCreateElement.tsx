@@ -19,7 +19,7 @@ const CCreateElement = ({ items, components = {}, nextRouter }: any): JSX.Elemen
         return typeof child === 'object' ? renderItem(child, k) : child;
       });
     }
-    console.log(uuidv4());
+
     return (
       <>
         <Tag key={uuidv4()} nextRouter={nextRouter} {...rest}>
