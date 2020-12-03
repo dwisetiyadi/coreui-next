@@ -125,6 +125,7 @@ import {
   cilPowerStandby,
   cilHeart,
   cilNewspaper,
+  cilPlus,
 } from './src';
 
 import { logo } from './logo';
@@ -229,6 +230,7 @@ export const icons: Record<any, any> = {
   cilPowerStandby,
   cilHeart,
   cilNewspaper,
+  cilPlus,
   cifUs,
   cifBr,
   cifIn,
